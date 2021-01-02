@@ -12,3 +12,10 @@ class Cell:
         if (self._value == 0) or (self == other):
             return (Cell(self._value + other._value), Cell(0))
         return (self, other)
+
+    def __bool__(self):
+        return bool(self._value)
+
+    @property
+    def value(self):
+        return self._value

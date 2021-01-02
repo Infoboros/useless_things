@@ -39,3 +39,12 @@ class TestCell(unittest.TestCase):
 
         retA, retB = b + a
         self.assertTrue((retA == b) and (retB == a))
+
+    def test_bool(self):
+        true_1 = Cell(2)
+        true_2 = Cell(4)
+        false = Cell()
+
+        self.assertTrue(true_1)
+        self.assertTrue(true_2)
+        self.assertFalse(false)
